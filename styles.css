@@ -1015,3 +1015,70 @@ img {
         height: 28px;
     }
 }
+
+/* Testimonials with images */
+.testimonials .testimonial img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonials .testimonial {
+    flex: 0 1 300px;
+    max-width: 320px;
+}
+
+/* Supplier images grid */
+.supplier-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.supplier-images img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.supplier-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Other products with images */
+.other-grid .other-item img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.other-grid .other-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .supplier-images img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .testimonials .testimonial {
+        max-width: 280px;
+    }
+}
