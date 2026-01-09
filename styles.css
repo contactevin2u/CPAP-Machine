@@ -255,7 +255,182 @@ img {
     text-align: center;
     font-size: 2.5rem;
     color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--secondary);
+    font-weight: 600;
     margin-bottom: 50px;
+}
+
+/* Products Section */
+.products {
+    padding: 100px 0;
+    background: var(--bg);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.product-card.featured {
+    border: 3px solid var(--primary);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0066a1 100%);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.product-brand {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0066a1 100%);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.brand-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.product-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-image img {
+    max-height: 180px;
+    object-fit: contain;
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.product-desc {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.product-pricing {
+    background: var(--bg-light);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.price-row:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.price-label {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.price-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.price-value small {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.installment-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0066a1 100%);
+    color: white;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.installment-badge svg {
+    flex-shrink: 0;
+}
+
+.installment-badge div {
+    display: flex;
+    flex-direction: column;
+}
+
+.installment-badge strong {
+    font-size: 0.85rem;
+}
+
+.installment-badge span {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.product-note {
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-style: italic;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #e8f4f8;
+    border-radius: 8px;
+}
+
+.product-card .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
 }
 
 /* Services Section */
@@ -531,6 +706,16 @@ img {
 
     .hero-image {
         order: -1;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .certifications {
+        justify-content: center;
     }
 
     .services-grid {
